@@ -1,7 +1,8 @@
 <?php
 require_once( 'config.php' );
 
-$sql = 'select * from tbl_users ORDER BY score DESC';
+$name = $_GET['name'];
+$sql = 'SELECT * FROM cities WHERE prov_id = 35 AND city LIKE "%'.$name.'%"';
 
 $r = mysqli_query( $con, $sql );
 
@@ -11,12 +12,9 @@ $location = array();
 while( $row = mysqli_fetch_array( $r ) )
  {
     array_push( $result, array(
-        'id_user'=>$row['id'],
-        'name'=>$row['name'],
-        'email'=> $row['email'],
-        'score'=>$row['score'],
-        'chance'=>$row['chance'],
-        'level'=>$row['level']
+        'id'=>$row['id'],
+        'prov_id'=>$row['prov_id'],
+        'city'=> $row['city']
     ) );
 }
 

@@ -6,13 +6,10 @@ class usr {
 
 if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
  {
-    $nama = $_POST['nama'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $dateBirth = $_POST['dateBirth'];
-    $domicile = $_POST['domicile'];
-    $sql = "insert into tbl_users (name,email,password,dateBirth,domicile) 
-    values ('$nama','$email','$password','$dateBirth','$domicile')";
+    $score = $_POST['score'];
+    $chance = $_POST['chance'];
+    $id = $_GET['id'];
+    $sql = "UPDATE tbl_users SET chance = '$chance', score = '$score'  WHERE id = '$id'";
 
     if ( mysqli_query( $con, $sql ) )
  {

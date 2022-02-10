@@ -1,7 +1,7 @@
 <?php
 
 $databaseHost = 'localhost';
-$databaseName = 'game_penyebaran';
+$databaseName = 'dengue_buster';
 $databaseUsername = 'root';
 $databasePassword = '';
 

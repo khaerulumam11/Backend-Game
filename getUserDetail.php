@@ -6,7 +6,7 @@ class usr {
 
 $id = $_GET['id'];
 
-$query = mysqli_query( $con, "SELECT * FROM tbl_user WHERE id ='$id'" );
+$query = mysqli_query( $con, "SELECT * FROM tbl_users WHERE id ='$id'" );
 
 $row = mysqli_fetch_array( $query );
 
